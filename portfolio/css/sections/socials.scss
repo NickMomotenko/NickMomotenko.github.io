@@ -1,0 +1,51 @@
+.socials{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	
+	&__item{
+		padding-right: 15px;
+
+		&:last-item{
+			padding-right: 0;
+		}
+	}
+	
+	&__link{
+		display: inline-block;
+		height: 35px;
+		width: 35px;
+		border:2px solid white;
+		position: relative;
+		transition: .5s;
+
+		&:hover{
+			border:2px solid grey;
+			opacity: .6;
+		}
+		
+		&:before{
+			content:'';
+			height: 16px;
+			width: 16px;
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+
+		&--vk{
+			background: url(../img/intro/vk.png) center center no-repeat;
+		}
+
+		&--fb{
+			background: url(../img/intro/fa.png) center center no-repeat;
+		}
+
+		&--in{
+			background: url(../img/intro/in.png) center center no-repeat;
+		}
+	}
+	
+}

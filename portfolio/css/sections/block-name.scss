@@ -1,0 +1,88 @@
+.block__name{
+	position: absolute;
+	left: -190px;
+    top: 10px;
+	width: 700px;
+	height: 700px;
+	border: 2px solid white;
+    box-shadow:inset 0 0 45px 10px white;
+	transition:all 1s;
+    z-index: 1;
+    transform: rotate(-35deg);
+    color: white;
+
+    &-container{
+    	display: flex;
+    	height: 100%;
+    	flex-direction: column;
+    	transform: rotate(35deg);
+    	justify-content: center;
+    	padding-left: 250px;
+
+        transition: 1s;
+        transition-property: padding;
+
+        @include monitor{
+            padding-left: 215px;
+        }
+    }
+
+    &-title{
+    	margin-bottom: 20px;
+    }
+
+    &-position{
+    	margin-bottom: 40px;
+    }
+
+    &-socials{
+    	margin-bottom: 40px;
+    }
+
+
+    @include monitor{
+        width: 630px;
+    }
+
+    @include smallmonitor{
+    }
+
+    @include tablets{
+        top: -131px;
+        width: 520px;
+        height: 605px;
+    }
+
+    @include phones{
+        top: -3px;
+        width: 550px;
+        height: 550px;
+    }
+
+
+
+}
+
+.no-visible-lines{
+    box-shadow:none;
+    border: none;
+
+    .block__name-container{
+        padding-left: 215px;
+    }
+
+
+    @include monitor{
+        .title{
+            font-size: 38px;
+
+            &--subtitle{
+                font-size: 24px;
+            }
+        }
+    }
+
+    @include tablets{
+        display: none;
+    }
+}

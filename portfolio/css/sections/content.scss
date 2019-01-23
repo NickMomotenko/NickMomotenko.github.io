@@ -1,0 +1,41 @@
+.content{
+	height: auto;
+	overflow:hidden;
+	padding: 100px 10%;
+	opacity: 1;
+	animation: visin 1.5s;
+
+	&__block{
+		margin-bottom: 40px;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		&-title{
+			border-bottom: 1px solid grey;
+			padding-bottom: 5px;
+		}
+
+		&-information{
+			padding-top: 50px;
+		}
+	}
+
+	@include phones{
+		padding: 100px 5%;
+	}
+}
+
+
+
+.portfolio{
+	&__list{
+		flex-direction: row;
+	}
+
+	&__item{
+		width: 50%;
+		flex-wrap: wrap;
+	}
+}

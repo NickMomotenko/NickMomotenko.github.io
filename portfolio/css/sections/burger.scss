@@ -1,0 +1,73 @@
+.burger{
+	position: fixed;
+	bottom: 20px;
+	left: 50%;
+	z-index: 2;
+	transform: translateX(-50%);
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	display: none;
+	
+	
+	transition: 1s;
+
+	@include phones{
+		display: flex;
+	}
+}
+
+.lines{
+	display: inline-block;
+	height: 6px;
+	width: 50px;
+	background-color: #fff;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	transition: .5s;
+	animation:line 1s linear infinite;
+	animation-delay: 1s;
+
+	&:last-child{
+		margin-bottom: 0;
+	}
+}
+
+
+.closeBurger{
+	/*transition-delay: 1s;*/
+	/*bottom: -50%;*/
+	animation: noneLine 1s linear forwards;
+	animation-delay: 1s;
+}
+
+.showBurger{
+	bottom: 20px;
+}
+
+
+@keyframes line {
+	from{
+		animation-delay: 1s;
+	}
+
+	to{
+		width: 25px;
+		/*transition-delay: 1s;*/
+	}
+}
+
+@keyframes noneLine{
+	from{
+		display: block;
+	}
+
+	35%{
+		bottom: 50px;
+	}
+
+	to{
+		bottom: -50%;
+		/*display: none;*/
+	}
+}

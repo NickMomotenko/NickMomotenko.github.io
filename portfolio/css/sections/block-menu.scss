@@ -1,0 +1,277 @@
+.block{
+	
+	transition: all 1s;
+
+	&__menus{
+		@include phones{
+			visibility: hidden;
+			opacity: 0;
+		}
+	}
+	
+	&__resume, &__portfolio, &__blog,&__contact{
+		position:absolute;
+		width: 430px;
+	    height: 300px;
+	    box-shadow:inset 0 0 5px 3px white;
+	    transition: all .5s;
+	    z-index: 1;
+	    transform: rotate(-35deg);
+	    color: white;
+	    cursor: pointer;
+
+	    &:hover{
+			box-shadow:inset 0 0 35px 5px white;
+
+			@include phones{
+				box-shadow: 0 0 5px 3px white;
+			}
+	    }
+
+	    @include avaragemonitor{
+			width: 330px;
+    		height: 260px;
+	    }
+
+	    @include smallmonitor{
+	    	width: 300px;
+    		height: 247px;
+	    }
+
+	    @include monitor{
+	    	width: 296px;
+	    }
+
+	    @include tablets{
+	    	width: 150px;
+    		height: 240px;
+	    }
+
+	    @include phones{
+	    	height: 120px;
+    		width: 120px;
+    		transform: rotate(-35deg) translateX(-50%);
+	    }
+	}
+
+	&__container{
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transform: rotate(35deg);
+	}
+
+	&__resume{
+		left: 415px;
+   		top: -104px;
+
+   		@include avaragemonitor{
+   			left: 417px;
+    		top: -65px;
+   		}
+
+   		@include monitor{
+   			left: 339px;
+   		}
+
+   		@include smallmonitor{
+    		left: 333px;
+    	}
+
+    	@include tablets{
+			left: -11px;
+			top: 571px;
+    	}
+
+    	@include phones{
+		    left: 40%;
+		    top: 0%;
+    	}
+	}
+
+	&__portfolio{
+		left: 587px;
+    	top: 142px;
+
+    	@include avaragemonitor{
+    		left: 564px;
+    		top: 146px;
+    	}
+
+    	@include monitor{
+			left: 487px;
+    	}
+
+		@include smallmonitor{
+			top: 140px;
+			left: 476px;
+		}
+
+		@include tablets{
+			left: 60px;
+			top: 600px;
+		}
+
+		@include tablets{
+		    left: 117px;
+    		top: 481px;
+		}
+
+		@include phones{
+			left: 59%;
+    		top: 17%;
+		}
+	}
+
+	&__blog{
+		left: 758px;
+    	top: 387px;
+
+    	@include avaragemonitor{
+    		left: 713px;
+    		top: 358px;
+    	}
+
+    	@include monitor{
+			left: 635px;
+    	}
+
+    	@include smallmonitor{
+    	    left: 292px;
+    		top: 592px;;	
+    	}
+
+    	@include tablets{
+		    left: 244px;
+		    top: 392px;
+    	}
+
+    	@include phones{
+    		left: 29%;
+    		top: 29%;
+    	}
+	}
+
+	&__contact{
+		left: 1045px;
+    	top: 48px;
+
+    	@include avaragemonitor{
+    		left: 914px;
+    		top: 72px;
+    	}
+
+    	@include monitor{
+		    left: 795px;
+    	}
+
+    	@include smallmonitor{
+    		top: 419px;
+    		left: 540px;
+    	}
+
+    	@include tablets{
+    	    top: 304px;
+    		left: 370px;
+    	}
+
+    	@include phones{
+    		left: 48%;
+    		top: 46%;
+    	}
+	}
+
+	&__title{
+		position: relative;
+	    color: #FFF;
+	    margin: 50px; 
+	    font-size: 30px;
+	    line-height: 30px;
+	    font-weight: 600;
+	    text-transform: uppercase;
+	    position: relative;
+
+	    &:before{
+	    	position: absolute;
+		    top: -20px;
+		    left: -33px;
+		    font-size: 14px;
+		    color: white;
+
+		    @include tablets{
+		    	top: -46px;
+    			left: 25px;
+		    }
+
+		    @include phones{
+		    	font-size: 23px;
+		    	left: 50%;
+		    	transform: translateX(-50%);
+		    }
+	    }
+
+	    &:after{
+	    	content:'';
+	    	position: absolute;
+	    	top: 3px;
+    		left: -82px;;
+		    width: 70px;
+		    height: 1px;
+		    background: #FFF;
+
+		    @include tablets{
+		    	top: -16px;
+    			left: -1px;
+		    }
+
+	    }
+
+	    @include monitor{
+	    	font-size: 27px;
+	    }
+
+      	@include tablets{
+			font-size: 20px;
+    		padding-right: 30px;
+		}
+
+		@include phones{
+			padding-right: 0;
+		}
+	    
+		&--one{
+			&:before{
+				content:'01';
+			}
+		}
+
+		&--two{
+			&:before{
+				content:'02';
+			}
+		}
+
+		&--three{
+			&:before{
+				content:'03';
+			}
+		}
+
+		&--four{
+			&:before{
+				content:'04';
+			}
+		}
+	}
+
+}
+
+.no-visible{
+	display: none;
+}
+
+.showMenu{
+	visibility: visible;
+	opacity: 1;
+}

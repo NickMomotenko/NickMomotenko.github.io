@@ -1,0 +1,20 @@
+.block__content{
+	position: fixed;
+	top: 100%;
+	left: 35%;
+	width: 65%;
+	height: 100vh;
+	z-index: 3;
+	background: white;
+	overflow-x:hidden;
+	overflow-y: scroll;
+	transition: 1s;
+	transition-property:top;
+
+	@include tablets{
+		left: 0;
+		width: 100%;
+	}
+
+}
+

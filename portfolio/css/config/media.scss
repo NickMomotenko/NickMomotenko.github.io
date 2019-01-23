@@ -1,0 +1,52 @@
+@function rem($px){
+	@return $px/16px+0rem;
+}
+
+@mixin avaragemonitor{
+	@media screen and (max-width: 1400px){
+		@content;
+	}
+}
+
+@mixin monitor{
+	@media screen and (max-width: 1200px){
+		@content;
+	}
+}
+
+@mixin smallmonitor{
+	@media screen and (max-width: 1024px){
+		@content;
+	}
+}
+
+/*@mixin laptop{
+	@media screen and (max-width: 992px){
+		@content;
+	}
+}*/
+
+@mixin tablets{
+	@media screen and (max-width: 768px){
+		@content;
+	}
+}
+
+@mixin smalltablets{
+	@media screen and (max-width: 600px){
+		@content;
+	}
+}
+
+@mixin phones{
+	@media screen and (max-width: 480px){
+		@content;
+	}
+}
+
+@mixin smallphones{
+	@media screen and (max-width: 320px){
+		@content;
+	}
+}
+
