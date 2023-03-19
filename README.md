@@ -3,7 +3,7 @@
 I am a Frontend Web developer
 How to contact me: Just send me message in Telegram [@NickMomotenko](https://t.me/NickMomotenko)
 
-My education: Master's Degree in Software Development
+My education: Computer Science
 
 [![GitHub Streak](https://streak-stats.demolab.com?user=NickMomotenko&theme=transparent&hide_border=true&mode=weekly&fire=FF2222&dates=2C68F6&currStreakLabel=2C68F6&currStreakNum=2C68F6)](https://git.io/streak-stats)
 
